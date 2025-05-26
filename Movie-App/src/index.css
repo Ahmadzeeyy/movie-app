@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+* {
+  color: #fff;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
