@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <>
-      <nav className="flex justify-between h-auto py-7 px-12 sticky top-0 ">
+      <nav className="flex justify-between h-auto py-7 px-12 sticky top-0 z-20  scroll-m-0.5 bg-transparent backdrop-blur-sm">
         <div className="">logo</div>
         <div className="flex gap-7 list-none text-">
           <a href="">popular</a>
