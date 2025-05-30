@@ -6,29 +6,19 @@ export default function MovieItem({ movie }) {
   // console.log(popularMovie);
 
   return (
-    <div className="card bg-base-100 w-72  shadow-sm transition-all border-2 border-gray-500 hover:border-gray-400 hover:scale-101">
-      <figure>
+    <div className=" w-1/6  shadow-sm  px-1  inline-block">
+      <picture className="w-full max-w-md">
         <img
           src={`${endpoints.imageUrl(movie?.poster_path)}`}
           alt="Shoes"
-          className="h-72"
+          className="object-cover aspect-[2/3] rounded-lg transition-all hover:scale-105 duration-150"
         />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">
+      </picture>
+      {/* <div className="relative">
+        <h4 className="   lg:text-base-content sm:text-sm font-semibold ps-1 pt-0.5 whitespace-nowrap overflow-hidden text-ellipsis text-center ">
           {movie?.title || movie?.name || movie?.original_name}
-          <div className="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          {movie?.overview?.length > 100
-            ? `${movie?.overview.slice(0, 100)}...`
-            : movie?.overview}
-        </p>
-        <div className="card-actions justify-end">
-          {/* <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div> */}
-        </div>
-      </div>
+        </h4>
+      </div> */}
     </div>
   );
 }

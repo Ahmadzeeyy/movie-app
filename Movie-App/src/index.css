@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
-
+@plugin 'tailwind-scrollbar';
 * {
   color: #fff;
   box-sizing: border-box;
