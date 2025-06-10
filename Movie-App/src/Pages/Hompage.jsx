@@ -25,14 +25,16 @@ export default function Hompage() {
     fetchdata();
     fetchTrending();
     // console.log(popularMovie);
-  }, []);
-
-
+  }, []); 
   return (
     <>
+      <Carousel trendingMovie={trendingMovie} />
       <div className=" flex flex-col ">
         <ListMovie popularMovie={popularMovie} title={"Popular Movie"} />
-        <ListMovie popularMovie={trendingMovie} title={"Trending Movie This Week"} />
+        <ListMovie
+          popularMovie={trendingMovie}
+          title={"Trending Movie This Week"}
+        />
       </div>
     </>
   );
