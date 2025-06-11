@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getDetailMovie } from "../utils/movieAPI";
+import { useParams } from "react-router-dom";
 
 export default function DetailMovie() {
+  const [detailMovie, setdetailMovie] = useState(null);
+  const {movieId} = useParams();
+  useEffect(() => {
+      const fetchData = async () => {
+        const response = await getDetailMovie();
+  }
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row">

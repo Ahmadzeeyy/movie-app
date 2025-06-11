@@ -43,3 +43,16 @@ export async function getTopRatedMovie() {
     console.log(error?.message);
   }
 }
+
+export function getDetailMovie(id) {
+  try {
+    const { data } = axios.get(endpoints.detailMovie(id), {
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+      },
+    });
+    return data;
+  } catch (error) {
+    console.log(error?.message);
+  }
+}
