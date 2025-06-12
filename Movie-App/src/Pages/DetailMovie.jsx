@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { getDetailMovie } from "../utils/movieAPI";
 import { useParams } from "react-router-dom";
+const IMAGE_URL = import.meta.env.VITE_IMAGE_URL;
 
 export default function DetailMovie() {
-  const [detailMovie, setdetailMovie] = useState(null);
-  const {movieId} = useParams();
+  const [detailMovie, setdetailMovie] = useState({});
+  const { detailId } = useParams();
+
   useEffect(() => {
-      const fetchData = async () => {
-        const response = await getDetailMovie();
-  }
+    const fetchData = async () => {
+      const response = await getDetailMovie(detailId);
+      setdetailMovie(response);
+      console.log(response);
+    };
+    fetchData();
+  }, [detailId]);
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row">
         <img
-          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+          src={`${IMAGE_URL}/${detailMovie?.belongs_to_collection?.poster_path} || `}
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>

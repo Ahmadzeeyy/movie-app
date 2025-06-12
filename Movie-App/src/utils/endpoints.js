@@ -9,7 +9,7 @@ export const endpoints = {
   trendingMovie: `${API_URL}trending/movie/week`,
   topRatedMovie: `${API_URL}top_rated`,
   detailMovie: (id) => {
-    return `${API_URL}${id}`;
+    return `${API_URL}movie/${id}`;
   },
   imageUrl: (path) => {
     return `${IMAGE_URL}/${path}`;

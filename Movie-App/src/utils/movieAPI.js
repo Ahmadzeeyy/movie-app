@@ -44,13 +44,14 @@ export async function getTopRatedMovie() {
   }
 }
 
-export function getDetailMovie(id) {
+export async function getDetailMovie(id) {
   try {
-    const { data } = axios.get(endpoints.detailMovie(id), {
+    const { data } = await axios.get(endpoints.detailMovie(id), {
       headers: {
         Authorization: `Bearer ${API_KEY}`,
       },
     });
+    // console.log(data);
     return data;
   } catch (error) {
     console.log(error?.message);

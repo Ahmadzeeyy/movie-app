@@ -1,12 +1,9 @@
-import { useEffect } from "react";
 import Carousel from "./components/carousel";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Hompage from "./Pages/Hompage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-
-import { useState } from "react";
 import DetailMovie from "./Pages/DetailMovie";
 
 function App() {
